@@ -1,5 +1,5 @@
 // style CSS console.log
-var inputStyle = 'color:blue';
+var inputStyle;
 var print = {
 	s:function(mes) {
 		console.log("%c" + mes, "font-size: 20px; color:lightgreen");
@@ -11,14 +11,16 @@ var print = {
 	},
 	e:function(mes){console.error(mes);
 	},
-	i:function(mes, inputStyle){
-		if(this.inputStyle != null){
-			inputStyle = this.inputStyle;
-			console.log("%cStyle defined as: " + this.inputStyle, this.inputStyle);
-			console.log("%c" + mes, this.inputStyle);
+	i:function(mes, inputS){
+		if(inputS != null){
+			inputStyle = inputS;
+			console.warn("Style defined as: " + inputS);
+			console.log("%c" + mes, inputS);
 			
+		} else if(inputStyle){
+			console.log("%c" + mes, inputStyle);
 		} else {
-			console.log("You must define a style > %cprint.i('hi', 'color:red')", inputStyle);
+			console.log("%cYou must define a style: %c print.i('hi', 'color:lightblue; font-size:3em')", "font-size:3em", "color:lightblue;font-size:3em");
 		}
 				
 	}
