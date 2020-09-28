@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp Share</title>
+    
+</head>
+<body>
+    <script>
+        const greating = () => {
+            const now = new Date();
+            hours = now.getHours();
+            let great;
+
+            if(hours >= 0 && hours < 12) {
+                great = 'bom dia';
+            } else if (hours >= 12 && hours < 18) {
+                great = 'boa tarde';
+            } else if (hours >= 18 && hours < 0) {
+                great = 'boa noite';
+            }
+            window.location.replace(`https://wa.me/5599982349787?text=Oi%20Adriel,%20${great}`);
+        }
+
+        greating();
+
+    </script>
+</body>
+</html>
