@@ -52,7 +52,10 @@
     __d(function(g,r,i,a,m,e,d){"use strict";Object.defineProperty(e,'__esModule',{value:!0}),window.instgrm||(window.instgrm={Embeds:{}}),e.getGlobalContext=function(){return window.instgrm.Embeds}},5,[]);
     global.__r(0);
   
-    document.querySelector('img.FFVAD').addEventListener('load', (event) => {
+    
+    }).call({});
+
+
+document.querySelector('img.FFVAD').addEventListener('load', (event) => {
             console.log('it works');
     });
-    }).call({});
